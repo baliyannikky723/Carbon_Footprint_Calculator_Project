@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8f2;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header img {
+    padding-top: -1px;
+    max-height: 80px;
+    width: 80px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: #3ab556;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #329e4d;
+}
+
+.illustration {
+    margin-top: 40px;
+}
+
+.illustration img {
+    max-width: 200px;
+}
+
+/* Two-Column Layout for About, Knowledge, and FAQ Pages */
+.about-container, .faq-container, .knowledge-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Left Div (Image Section) */
+.about-image, .faq-image, .knowledge-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img, .faq-image img, .knowledge-image img {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Div (Text Section) */
+.about-text, .faq-content, .knowledge-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    color: #fff; /* Default text color */
+}
+
+/* About Page - Text Styling */
+.about-page {
+    background-color: #000;
+}
+
+.about-text h1 {
+    color: #3ab556;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Knowledge Page - Styling */
+.knowledge-page {
+    background-color: #fff; /* Changed to white */
+}
+
+.knowledge-content h1 {
+    color: #3ab556;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.knowledge-content h2 {
+    color: #3ab556;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.knowledge-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* FAQ Page - Styling */
+.faq-page {
+    background-color: #000;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: row-reverse; /* Reversed to make image on the left and text on the right */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.faq-content h1 {
+    color: #3ab556;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.faq-content .faq {
+    margin-bottom: 20px;
+}
+
+.faq-content .faq h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.faq-content .faq p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: #3ab556;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-container, .faq-container, .knowledge-container {
+        flex-direction: column;
+    }
+
+    .about-image, .faq-image, .knowledge-image, .about-text, .faq-content, .knowledge-content {
+        flex: 1;
+        text-align: center;
+    }
+
+    .faq-container {
+        flex-direction: column; /* Stacks the image and text vertically on small screens */
+    }
+}
